@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class NewMonoBehaviourScript : MonoBehaviour
@@ -17,16 +16,17 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     }
 
+    // 蘋果被碰撞事件並鎖定appleArea裡
     void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision);
 
-        float range1 = UnityEngine.Random.Range(
+        float range1 = Random.Range(
             appleArea.bounds.min.x,
             appleArea.bounds.max.x
             ); // 隨機取得蘋果範圍
 
-        float range2 = UnityEngine.Random.Range(
+        float range2 = Random.Range(
             appleArea.bounds.min.y,
             appleArea.bounds.max.y
             ); // 隨機取得蘋果範圍
